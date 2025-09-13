@@ -1,0 +1,96 @@
+{
+  "AcademicCalendar2025-26": {
+    "OddSemester2025": [
+      {
+        "responses": {
+          "en-US": "The Commencement of Classes for students other than the first year is on 22nd July 2025.",
+          "hi-IN": "प्रथम वर्ष के अलावा अन्य छात्रों के लिए कक्षाओं का प्रारंभ 22 जुलाई 2025 को है।"
+        },
+        "data": {
+          "event_name": "Commencement of Classes (Other than first year)",
+          "period": "22nd July 25.",
+          "days": "Tuesday"
+        }
+      },
+      {
+        "responses": {
+          "en-US": "The Commencement of Classes for first-year students is on 5th August 2025.",
+          "hi-IN": "प्रथम वर्ष के छात्रों के लिए कक्षाओं का प्रारंभ 5 अगस्त 2025 को है।"
+        },
+        "data": {
+          "event_name": "Commencement of Classes (First year)",
+          "period": "5th Aug. 25",
+          "days": "Tuesday"
+        }
+      },
+      {
+        "responses": {
+          "en-US": "The Submission of Examination forms is from 1st September to 6th September 2025.",
+          "hi-IN": "परीक्षा फॉर्म जमा करने की अवधि 1 सितंबर से 6 सितंबर 2025 तक है।"
+        },
+        "data": {
+          "event_name": "Submission of Examination forms",
+          "period": "1st Sept. to 6th Sept. 25",
+          "days": "Monday-Saturday"
+        }
+      },
+       {
+        "responses": {
+          "en-US": "The Mid-term Test is scheduled from 10th October to 18th October 2025.",
+          "hi-IN": "मिड-टर्म टेस्ट 10 अक्टूबर से 18 अक्टूबर 2025 तक निर्धारित है।"
+        },
+        "data": {
+          "event_name": "Mid-term Test",
+          "period": "10th Oct. to 18th Oct. 25",
+          "days": "Friday - Saturday"
+        }
+      },
+      {
+        "responses": {
+          "en-US": "The Autumn Break for Diwali is from 20th October to 23rd October 2025.",
+          "hi-IN": "दिवाली के लिए ऑटम ब्रेक 20 अक्टूबर से 23 अक्टूबर 2025 तक है।"
+        },
+        "data": {
+            "event_name": "Autumn Break (Diwali)",
+            "period": "20th Oct. to 23rd Oct. 25",
+            "days": "Monday -Thursday"
+        }
+      },
+      {
+        "responses": {
+          "en-US": "The End Semester Exams are scheduled from 26th November to 13th December 2025.",
+          "hi-IN": "एंड सेमेस्टर परीक्षा 26 नवंबर से 13 दिसंबर 2025 तक निर्धारित है।"
+        },
+        "data": {
+          "event_name": "End Semester Exams",
+          "period": "26th Nov. to 13th Dec. 25",
+          "days": "Wednesday - Saturday"
+        }
+      }
+    ],
+    "EvenSemester2026": [
+      {
+        "responses": {
+          "en-US": "The Commencement of Classes for the even semester is on 6th January 2026.",
+          "hi-IN": "सम सेमेस्टर के लिए कक्षाओं का प्रारंभ 6 जनवरी 2026 को है।"
+        },
+        "data": {
+          "event_name": "Commencement of Classes",
+          "period": "6th Jan. 2026",
+          "days": "Tuesday"
+        }
+      },
+      {
+        "responses": {
+          "en-US": "The Convocation is on 17th January 2026.",
+          "hi-IN": "दीक्षांत समारोह 17 जनवरी 2026 को है।"
+        },
+        "data": {
+          "event_name": "Convocation",
+          "period": "17th Jan. 2026",
+          "days": "Saturday"
+        }
+      }
+    ]
+  }
+}

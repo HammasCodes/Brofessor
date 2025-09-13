@@ -1,0 +1,84 @@
+{
+  "ComputerApplicationPrograms": [
+    {
+      "intent_name": "program_info_bca",
+      "responses": {
+        "en-US": "For the Bachelor of Computer Applications, the eligibility is a minimum of 50% marks in 10+2. The fee for the first year is Rs 50,000.",
+        "hi-IN": "बैचलर ऑफ कंप्यूटर एप्लीकेशन के लिए, पात्रता 10+2 में न्यूनतम 50% अंक है। पहले वर्ष का शुल्क 50,000 रुपये है।"
+      },
+      "data": {
+        "program_name": "Bachelor of Computer Applications",
+        "fees": [
+          { "year": "1stYr", "fee": "Rs 50,000" },
+          { "year": "2ndYr", "fee": "Rs 55,000" },
+          { "year": "3rdYr", "fee": "Rs 60,000" }
+        ],
+        "eligibility_criteria": "Minimum 50% (45% for SC/ST) marks in 10+2",
+        "program_code": "BCA-001",
+        "duration": "3 Years",
+        "level": "Graduate Programme",
+        "department": "Department of Computer Applications"
+      }
+    },
+    {
+      "intent_name": "program_info_bca_ai",
+      "responses": {
+        "en-US": "For the Bachelor of Computer Applications with a specialization in Artificial Intelligence, the eligibility is a minimum of 50% marks in 10+2. The fee for the first year is Rs 1,00,000.",
+        "hi-IN": "आर्टिफिशियल इंटेलिजेंस विशेषज्ञता के साथ बैचलर ऑफ कंप्यूटर एप्लीकेशन के लिए, पात्रता 10+2 में न्यूनतम 50% अंक है। पहले वर्ष का शुल्क 1,00,000 रुपये है।"
+      },
+      "data": {
+        "program_name": "Bachelor of Computer Applications (Artificial Intelligence)",
+        "fees": [
+          { "year": "1stYr", "fee": "Rs 1,00,000" },
+          { "year": "2ndYr", "fee": "Rs 1,00,000" },
+          { "year": "3rdYr", "fee": "Rs 1,00,000" }
+        ],
+        "eligibility_criteria": "Minimum 50% (45% for SC/ST) marks in 10+2",
+        "program_code": "BCA-002",
+        "duration": "3 Years",
+        "level": "Graduate Programme",
+        "department": "Department of Computer Applications"
+      }
+    },
+    {
+      "intent_name": "program_info_bca_cloud",
+      "responses": {
+        "en-US": "For the Bachelor of Computer Applications with a specialization in Cloud Computing, the eligibility is a minimum of 50% marks in 10+2. The fee for the first year is Rs 1,00,000.",
+        "hi-IN": "क्लाउड कंप्यूटिंग विशेषज्ञता के साथ बैचलर ऑफ कंप्यूटर एप्लीकेशन के लिए, पात्रता 10+2 में न्यूनतम 50% अंक है। पहले वर्ष का शुल्क 1,00,000 रुपये है।"
+      },
+      "data": {
+        "program_name": "Bachelor of Computer Applications (Cloud Computing)",
+        "fees": [
+          { "year": "1stYr", "fee": "Rs 1,00,000" },
+          { "year": "2ndYr", "fee": "Rs 1,00,000" },
+          { "year": "3rdYr", "fee": "Rs 1,00,000" }
+        ],
+        "eligibility_criteria": "Minimum 50% (45% for SC/ST) marks in 10+2",
+        "program_code": "BCA-004",
+        "duration": "3 Years",
+        "level": "Graduate Programme",
+        "department": "Department of Computer Applications"
+      }
+    },
+    {
+      "intent_name": "program_info_phd_ca",
+      "responses": {
+        "en-US": "For the Ph.D. in Computer Application, a Master's degree (M.Sc., MS, or MCA) with a minimum of 55% marks is required. The fee for the first year is Rs 50,000.",
+        "hi-IN": "कंप्यूटर एप्लीकेशन में पीएचडी के लिए, न्यूनतम 55% अंकों के साथ मास्टर डिग्री (एम.एससी., एमएस, या एमसीए) आवश्यक है। पहले वर्ष का शुल्क 50,000 रुपये है।"
+      },
+      "data": {
+        "program_name": "Ph.D. in computer Application",
+        "fees": [
+          { "year": "1stYr", "fee": "Rs 50,000" },
+          { "year": "2ndYr", "fee": "Rs 50,000" },
+          { "year": "3rdYr", "fee": "Rs 50,000" }
+        ],
+        "eligibility_criteria": "M. Sc. or M.S. degree in (Computer Science/Information Technology/Information Science/Software Engineering/Computer Technology/Multimedia) or MCA and its related disciplines OR First Class in M.Phil. degree in the concerned subject or its equivalent grade point average in the relevant discipline any university accepted by the Syndicate as equivalent thereto. Minimum 55% (50% for SC/ST) marks in Post-Graduation.",
+        "program_code": null,
+        "duration": "3 Year",
+        "level": "Doctoral Programme",
+        "department": "Department of Computer Applications"
+      }
+    }
+  ]
+}

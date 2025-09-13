@@ -1,0 +1,206 @@
+
+Intent Name
+faculty_info_amritansh_mishra
+Faculty Name
+Amritansh Mishra Sir
+Faculty No.
+9997779184
+Room No.
+70
+Faculty Position
+Chief proctor
+
+---
+
+Intent Name
+faculty_info_manish_gupta
+Faculty Name
+Manish Gupta Sir
+Faculty No.
+9690017946
+Room No.
+71
+Faculty Position
+Dean
+
+---
+
+Intent Name
+faculty_info_akash_sanghi
+Faculty Name
+Akash Sanghi Sir
+Faculty No.
+7217011275
+Room No.
+48
+Faculty Position
+HOD (Computer Application Department)
+
+---
+
+Intent Name
+faculty_info_kushal_jauhri
+Faculty Name
+Kushal Jauhri Sir
+Faculty No.
+7217011336
+Room No.
+104
+Faculty Position
+Associate HOD
+
+---
+
+Intent Name
+faculty_info_siddharth_pandey
+Faculty Name
+Siddharth Pandey Sir
+Faculty No.
+8979302777
+Room No.
+94
+Faculty Position
+Time-Table Co-ordinator
+
+---
+
+Intent Name
+faculty_info_ritik_saxena
+Faculty Name
+Ritik Saxena Sir
+Faculty No.
+7505770458
+Room No.
+132
+Faculty Position
+Time-Table Co-ordinator
+
+---
+
+Intent Name
+faculty_info_deepak_pathak
+Faculty Name
+Deepak Pathak Sir
+Faculty No.
+7217011344
+Room No.
+104
+Faculty Position
+OCA LinkedIn Coordinator & Digi Shakti Co-ordinator
+
+---
+
+Intent Name
+faculty_info_saurabh_kumar
+Faculty Name
+Saurabh Kumar Sir
+Faculty No.
+7217011343
+Room No.
+104
+Faculty Position
+End Semester practical in charge
+
+---
+
+Intent Name
+faculty_info_geetanjali_rautela
+Faculty Name
+Geetanjali Rautela Ma'am
+Faculty No.
+8279916208
+Room No.
+104
+Faculty Position
+UG Traning & Placement Co-ordinator
+
+---
+
+Intent Name
+faculty_info_navnika_kapoor
+Faculty Name
+Navnika Kapoor Ma'am
+Faculty No.
+8171055336
+Room No.
+104
+Faculty Position
+Not Available
+
+---
+
+Intent Name
+faculty_info_bharat
+Faculty Name
+Bharat Sir
+Faculty No.
+Not Available
+Room No.
+104
+Faculty Position
+Not Available
+
+---
+
+Intent Name
+faculty_info_kuldeep_rana
+Faculty Name
+Kuldeep Singh Rana Sir
+Faculty No.
+8384897322
+Room No.
+132
+Faculty Position
+Not Available
+
+---
+
+Intent Name
+faculty_info_rahul_mishra
+Faculty Name
+Rahul Mishra Sir
+Faculty No.
+7310048468
+Room No.
+132
+Faculty Position
+FOCA Room Amenities Co-ordinator
+
+---
+
+Intent Name
+faculty_info_pratha
+Faculty Name
+Pratha Ma'am
+Faculty No.
+6398955436
+Room No.
+94
+Faculty Position
+Not Available
+
+---
+
+Intent Name
+faculty_info_atul
+Faculty Name
+Atul Sir
+Faculty No.
+9870750649
+Room No.
+104
+Faculty Position
+Not Available
+
+---
+
+Intent Name
+faculty_info_megha
+Faculty Name
+Megha Ma'am
+Faculty No.
+9997256653
+Room No.
+94
+Faculty Position
+Not Available
