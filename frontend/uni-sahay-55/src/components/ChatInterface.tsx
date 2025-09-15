@@ -3,11 +3,11 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { 
+import {
   Send, Bot, User, Globe, GraduationCap,
   DollarSign, Calendar, FileText, MapPin, Phone, Award,
   RefreshCw, AlertCircle,
-  User2Icon,Book,Building2
+  User2Icon, Book, Building2
 } from 'lucide-react';
 
 interface Message {
@@ -24,16 +24,15 @@ const categoryButtons = [
   { icon: FileText, label: 'Course Details', key: 'courses' },
   { icon: DollarSign, label: 'Fee Structure', key: 'fees' },
   { icon: GraduationCap, label: 'Admission Process', key: 'admission' },
-  { icon: Award, label: 'Scholarship Information', key: 'scholarship' },
+  { icon: Award, label: 'Scholarship', key: 'scholarship' },
   { icon: MapPin, label: 'Campus Facilities', key: 'facilities' },
   { icon: Calendar, label: 'Academic Calendar', key: 'calendar' },
   { icon: Phone, label: 'Contact Information', key: 'contact' },
   { icon: User2Icon, label: 'HOD', key: 'hod' },
-  { icon: Book, label: 'Books on Programming', key: 'books' },
+  { icon: Book, label: 'Programming Books', key: 'books' },
   { icon: GraduationCap, label: 'BCA', key: 'bca' },
-   { icon: Building2, label: 'About Invertis', key: 'about' },
-   { icon: GraduationCap, label: 'Admission Process', key: 'admission_extra' },
-  
+  { icon: Building2, label: 'About Invertis', key: 'about' },
+  { icon: GraduationCap, label: 'Admission Process', key: 'admission_extra' },
 ];
 
 const languages = [
@@ -65,14 +64,14 @@ export default function ChatInterface() {
 
   // Check backend root route
   const checkBackendConnection = async () => {
-  try {
-    const response = await fetch(`${API_BASE_URL}/health`); // call your health check route
-    setIsOnline(response.ok);
-  } catch (error) {
-    console.error('Backend connection failed:', error);
-    setIsOnline(false);
-  }
-};
+    try {
+      const response = await fetch(`${API_BASE_URL}/health`); // call your health check route
+      setIsOnline(response.ok);
+    } catch (error) {
+      console.error('Backend connection failed:', error);
+      setIsOnline(false);
+    }
+  };
 
   const sendMessageToBackend = async (query: string): Promise<string> => {
     try {
@@ -149,23 +148,22 @@ export default function ChatInterface() {
   };
 
   const handleCategoryClick = (category: string) => {
-  const categoryQuestions: Record<string, string> = {
-    courses: "What courses are available at the university?",
-    fees: "What is the fee structure?",
-    admission: "What is the admission process?",
-    scholarship: "What scholarships are available?",
-    facilities: "What facilities are available on campus?",
-    calendar: "What is the academic calendar?",
-    contact: "How can I contact the university?",
-    hod: "Akash Sanghi's sir contact?",
-    books: "Can you suggest some books on programming?",
-    bca: "Tell me about the BCA program.",
-     about: "Tell me about Invertis University.",
-     admission_extra: "Please explain the admission process in invertis.",
+    const categoryQuestions: Record<string, string> = {
+      courses: "What courses are available at the university?",
+      fees: "What is the fee structure?",
+      admission: "What is the admission process?",
+      scholarship: "What scholarships are available?",
+      facilities: "What facilities are available on campus?",
+      calendar: "What is the academic calendar?",
+      contact: "How can I contact the university?",
+      hod: "Akash Sanghi's sir contact?",
+      books: "Can you suggest some books on programming?",
+      bca: "Tell me about the BCA program.",
+      about: "Tell me about Invertis University.",
+      admission_extra: "Please explain the admission process in invertis.",
+    };
+    handleSendMessage(categoryQuestions[category] || "Tell me more about this topic");
   };
-  handleSendMessage(categoryQuestions[category] || "Tell me more about this topic");
-};
-
 
   const handleNewChat = () => {
     setMessages([{
@@ -180,34 +178,34 @@ export default function ChatInterface() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-subtle">
+    <div className="flex flex-col h-screen bg-[#171717] text-gray-100 font-sans">
       {/* Header */}
-      <div className="bg-gray-700 text-primary-foreground p-4 shadow-elegant">
-        <div className="flex items-center justify-between max-w-4xl mx-">
+      <div className="bg-[#242424] p-4 shadow-xl border-b border-[#333333] transition-all duration-500 ease-in-out">
+        <div className="flex items-center justify-between max-w-4xl mx-auto">
           <div className="flex items-center space-x-3">
-            <Avatar className="h-10 w-10 bg-primary-glow">
-              <AvatarFallback><Bot className="h-6 w-6" /></AvatarFallback>
+            <Avatar className="h-10 w-10 border-2 border-green-500 bg-[#333333] animate-pulse-fast">
+              <AvatarFallback><Bot className="h-6 w-6 text-green-500" /></AvatarFallback>
             </Avatar>
             <div>
               <div className="flex items-center space-x-2">
-                <h1 className="text-xl font-semibold">BROFESSOR</h1>
-                <div className={`w-2 h-2 rounded-full ${isOnline ? 'bg-green-400' : 'bg-red-400'}`} />
+                <h1 className="text-xl font-bold">BROFESSOR</h1>
+                <div className={`w-2 h-2 rounded-full ${isOnline ? 'bg-green-400' : 'bg-red-400'} animate-pulse`} />
               </div>
-              <p className="text-primary-foreground/80 text-sm">
+              <p className="text-gray-400 text-sm">
                 Invertis University {!isOnline && '(Offline Mode)'}
               </p>
             </div>
           </div>
           <div className="flex items-center space-x-3">
-            <Button onClick={() => setShowNewChatDialog(true)} variant="ghost" size="sm" className="h-8 w-8 p-0">
-              <RefreshCw className="h-4 w-4" />
+            <Button onClick={() => setShowNewChatDialog(true)} variant="ghost" size="sm" className="h-9 w-9 p-0 text-gray-400 hover:text-gray-200 transition-transform duration-300 hover:scale-110">
+              <RefreshCw className="h-5 w-5" />
             </Button>
             <div className="flex items-center space-x-2">
-              <Globe className="h-4 w-4" />
+              <Globe className="h-5 w-5 text-gray-400" />
               <select
                 value={selectedLanguage}
                 onChange={(e) => setSelectedLanguage(e.target.value)}
-                className="bg-primary-glow/20 text-primary-foreground border-0 rounded-md px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-foreground/20"
+                className="bg-[#333333] text-gray-200 border-0 rounded-md px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors"
               >
                 {languages.map(lang => <option key={lang.code} value={lang.code}>{lang.flag} {lang.name}</option>)}
               </select>
@@ -218,30 +216,30 @@ export default function ChatInterface() {
 
       {/* Connection Banner */}
       {!isOnline && (
-        <div className="bg-orange-100 border-l-4 border-orange-500 p-3 text-orange-700 text-sm">
+        <div className="bg-red-900/40 border-l-4 border-red-500 p-3 text-red-300 text-sm animate-fade-in-down">
           <div className="flex items-center max-w-4xl mx-auto">
-            <AlertCircle className="h-4 w-4 mr-2" />
+            <AlertCircle className="h-4 w-4 mr-2 text-red-500 animate-pulse" />
             <span>Backend connection lost. Using offline responses.</span>
-            <Button onClick={checkBackendConnection} variant="ghost" size="sm" className="ml-auto text-orange-700">Retry</Button>
+            <Button onClick={checkBackendConnection} variant="ghost" size="sm" className="ml-auto text-red-300 hover:text-red-200 transition-colors">Retry</Button>
           </div>
         </div>
       )}
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4">
-        <div className="max-w-4xl mx-auto space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 custom-scrollbar">
+        <div className="max-w-4xl mx-auto space-y-5">
           {messages.map(msg => (
-            <div key={msg.id} className={`flex ${msg.type==='user'?'justify-end':'justify-start'}`}>
-              <div className={`flex items-start space-x-2 max-w-[80%] ${msg.type==='user'?'flex-row-reverse space-x-reverse':''}`}>
-                <Avatar className="h-8 w-8 flex-shrink-0">
-                  <AvatarFallback className={msg.type==='user'?'bg-chat-user text-chat-user-foreground':'bg-chat-assistant text-chat-assistant-foreground'}>
-                    {msg.type==='user'?<User className="h-4 w-4"/>:<Bot className="h-4 w-4"/>}
+            <div key={msg.id} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div className={`flex items-start space-x-3 max-w-[85%] ${msg.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''} animate-fade-in-up`}>
+                <Avatar className="h-8 w-8 flex-shrink-0 border border-gray-600">
+                  <AvatarFallback className={`bg-[#333333] ${msg.type === 'user' ? 'text-blue-400' : 'text-green-500'}`}>
+                    {msg.type === 'user' ? <User className="h-4 w-4" /> : <Bot className="h-4 w-4" />}
                   </AvatarFallback>
                 </Avatar>
-                <Card className={`shadow-chat ${msg.type==='user'?'bg-gray-700 text-chat-user-foreground':'bg-chat-assistant text-chat-assistant-foreground'}`}>
-                  <CardContent className="p-3">
-                    <p className="text-sm whitespace-pre-line">{msg.content}</p>
-                    <p className="text-xs opacity-60 mt-2">{msg.timestamp.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</p>
+                <Card className={`rounded-xl shadow-lg border-none ${msg.type === 'user' ? 'bg-[#333333] text-gray-100 rounded-br-none' : 'bg-[#1e1e1e] text-gray-200 rounded-bl-none'}`}>
+                  <CardContent className="p-4">
+                    <p className="text-sm sm:text-base whitespace-pre-line">{msg.content}</p>
+                    <p className="text-xs text-gray-500 mt-2">{msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
                   </CardContent>
                 </Card>
               </div>
@@ -249,14 +247,14 @@ export default function ChatInterface() {
           ))}
           {isTyping && (
             <div className="flex justify-start">
-              <div className="flex items-start space-x-2 max-w-[80%]">
-                <Avatar className="h-8 w-8"><AvatarFallback className="bg-chat-assistant text-chat-assistant-foreground"><Bot className="h-4 w-4"/></AvatarFallback></Avatar>
-                <Card className="bg-chat-assistant text-chat-assistant-foreground shadow-chat">
-                  <CardContent className="p-3">
+              <div className="flex items-start space-x-3 max-w-[85%] animate-fade-in-up">
+                <Avatar className="h-8 w-8 flex-shrink-0 border border-gray-600"><AvatarFallback className="bg-[#333333] text-green-500"><Bot className="h-4 w-4" /></AvatarFallback></Avatar>
+                <Card className="bg-[#1e1e1e] text-gray-200 rounded-xl shadow-lg rounded-bl-none border-none">
+                  <CardContent className="p-4">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                      <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                      <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                      <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
                     </div>
                   </CardContent>
                 </Card>
@@ -268,59 +266,58 @@ export default function ChatInterface() {
       </div>
 
       {/* Categories & Input */}
-      <div className="p-4 bg-background border-t w-full max-w-8xl mx-auto">
-  {/* Category Buttons */}
-  <div className="flex space-x-2 overflow-x-auto pb-2 mb-4 hide-scrollbar">
-    {categoryButtons.map((cat) => (
-      <Button
-        key={cat.key}
-        variant="outline"
-        size="sm"
-        className="h-auto px-3 py-2 flex flex-col items-center space-y-1 text-xs rounded-xl shadow-sm hover:shadow-md transition flex-shrink-0"
-        onClick={() => handleCategoryClick(cat.key)}
-        disabled={isTyping}
-      >
-        <cat.icon className="h-4 w-4" />
-        <span className="text-center leading-tight">{cat.label}</span>
-      </Button>
-    ))}
-  </div>
+      <div className="p-4 bg-[#242424] border-t border-[#333333] w-full max-w-8xl mx-auto">
+        {/* Category Buttons */}
+        <div className="flex space-x-3 overflow-x-auto pb-4 hide-scrollbar">
+          {categoryButtons.map((cat) => (
+            <Button
+              key={cat.key}
+              variant="outline"
+              size="sm"
+              className="h-auto px-4 py-3 flex flex-col items-center space-y-1 text-xs rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 bg-[#333333] border-[#444444] text-gray-300 hover:bg-[#444444] hover:scale-105"
+              onClick={() => handleCategoryClick(cat.key)}
+              disabled={isTyping}
+            >
+              <cat.icon className="h-5 w-5 text-green-500" />
+              <span className="text-center leading-tight">{cat.label}</span>
+            </Button>
+          ))}
+        </div>
 
-  {/* Input + Send */}
-  <div className="flex space-x-3">
-    <Input
-      value={inputValue}
-      onChange={(e) => setInputValue(e.target.value)}
-      placeholder="Message..."
-      className="flex-1 rounded-2xl px-4 py-3 bg-gray-800 text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
-      onKeyPress={(e) => e.key === "Enter" && handleSendMessage(inputValue)}
-      disabled={isTyping}
-    />
-    <Button
-      onClick={() => handleSendMessage(inputValue)}
-      disabled={!inputValue.trim() || isTyping}
-      className="rounded-2xl px-5 bg-purple-900 hover:bg-purple-700 text-white transition shadow-sm hover:shadow-md"
-    >
-      <Send className="h-5 w-5" />
-    </Button>
-  </div>
-</div>
-
+        {/* Input + Send */}
+        <div className="flex space-x-3">
+          <Input
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder="Message..."
+            className="flex-1 rounded-full px-5 py-3 bg-[#1e1e1e] text-gray-100 border border-[#333333] focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300"
+            onKeyPress={(e) => e.key === "Enter" && handleSendMessage(inputValue)}
+            disabled={isTyping}
+          />
+          <Button
+            onClick={() => handleSendMessage(inputValue)}
+            disabled={!inputValue.trim() || isTyping}
+            className="rounded-full px-5 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            <Send className="h-5 w-5 animate-pulse-on-click" />
+          </Button>
+        </div>
+      </div>
 
       {/* New Chat Dialog */}
       {showNewChatDialog && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-background rounded-lg p-6 mx-4 w-full max-w-sm shadow-elegant">
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 animate-fade-in">
+          <div className="bg-[#242424] rounded-lg p-8 mx-4 w-full max-w-sm shadow-2xl animate-scale-up">
             <div className="text-center mb-6">
-              <div className="mx-auto w-12 h-12 bg-muted rounded-full flex items-center justify-center mb-4">
-                <Bot className="h-6 w-6 text-muted-foreground" />
+              <div className="mx-auto w-16 h-16 bg-[#333333] rounded-full flex items-center justify-center mb-4 border-2 border-green-500">
+                <Bot className="h-8 w-8 text-green-500" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Your campus assistant</h3>
-              <p className="text-muted-foreground text-sm">How can I help you today?</p>
+              <h3 className="text-xl font-bold mb-2">Start a new chat?</h3>
+              <p className="text-gray-400 text-sm">This will clear the current conversation.</p>
             </div>
             <div className="space-y-3">
-              <Button onClick={handleNewChat} className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground">Start new chat</Button>
-              <Button onClick={() => setShowNewChatDialog(false)} variant="ghost" className="w-full">Cancel</Button>
+              <Button onClick={handleNewChat} className="w-full bg-green-600 hover:bg-green-700 text-white transition-colors">Start new chat</Button>
+              <Button onClick={() => setShowNewChatDialog(false)} variant="ghost" className="w-full text-gray-300 hover:bg-gray-700 transition-colors">Cancel</Button>
             </div>
           </div>
         </div>
