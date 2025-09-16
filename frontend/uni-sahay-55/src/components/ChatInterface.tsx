@@ -65,7 +65,7 @@ export default function ChatInterface() {
   // Check backend root route
   const checkBackendConnection = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/health`); // call your health check route
+      const response = await fetch(`${API_BASE_URL}/health/`); // call your health check route
       setIsOnline(response.ok);
     } catch (error) {
       console.error('Backend connection failed:', error);
@@ -75,7 +75,7 @@ export default function ChatInterface() {
 
   const sendMessageToBackend = async (query: string): Promise<string> => {
     try {
-      const response = await fetch(`${API_BASE_URL}/chat`, {
+      const response = await fetch(`${API_BASE_URL}/chat/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query })
