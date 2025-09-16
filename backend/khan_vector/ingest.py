@@ -41,7 +41,7 @@ embeddings = OpenAIEmbeddings(
 )
 
 # ------------------- Text Splitter -------------------
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=1000)
 
 # ------------------- Load Previously Uploaded Files -------------------
 if UPLOADED_LOG.exists():
