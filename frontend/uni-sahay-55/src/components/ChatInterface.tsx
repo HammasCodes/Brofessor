@@ -18,7 +18,7 @@ interface Message {
   language?: string;
 }
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://brofessor-tdx6.onrender.com/api';
 
 const categoryButtons = [
   { icon: FileText, label: 'Course Details', key: 'courses' },
