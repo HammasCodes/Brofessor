@@ -1,141 +1,84 @@
-{
-    "ScholarshipsForNewStudents": [
-        {
-            "SNo": 1,
-            "intent_name": "scholarship_merit_ug",
-            "responses": {
-                "en-US": "The Merit Based Scholarship for Under Graduate students offers up to 100% of the tuition fee waiver depending on marks in the qualifying exam.",
-                "hi-IN": "अंडर ग्रेजुएट छात्रों के लिए मेरिट आधारित छात्रवृत्ति में योग्यता परीक्षा में अंकों के आधार पर शिक्षण शुल्क में 100% तक की छूट दी जाती है।"
-            },
-            "data": {
-                "ScholarshipScheme": "Merit Based Scholarship (For Under Graduate & Diploma Program)",
-                "Criteria": [
-                    { "Condition": "90% And Above Marks In Qualifying Exam", "Reward": "100% Of Tuition Fee" },
-                    { "Condition": "80%-89.99% Marks In Qualifying Exam", "Reward": "50% Of Tuition Fee" },
-                    { "Condition": "75%-79.99% Marks In Qualifying Exam", "Reward": "30% Of Tuition Fee" },
-                    { "Condition": "70%-74.99% Marks In Qualifying Exam", "Reward": "20% Of Tuition Fee" }
-                ]
-            }
-        },
-        {
-            "SNo": 2,
-            "intent_name": "scholarship_merit_pg",
-            "responses": {
-                "en-US": "The Merit Based Scholarship for Post Graduate students provides up to 100% of the tuition fee waiver based on marks in the qualifying exam.",
-                "hi-IN": "पोस्ट ग्रेजुएट छात्रों के लिए मेरिट आधारित छात्रवृत्ति में योग्यता परीक्षा में अंकों के आधार पर शिक्षण शुल्क में 100% तक की छूट प्रदान की जाती है।"
-            },
-            "data": {
-                "ScholarshipScheme": "Merit Based Scholarship (For Post Graduate Program)",
-                "Criteria": [
-                    { "Condition": "90% And Above Marks In Qualifying Exam", "Reward": "100% Of Tuition Fee" },
-                    { "Condition": "85%-89.99% Marks In Qualifying Exam", "Reward": "50% Of Tuition Fee" },
-                    { "Condition": "80%-84.99% Marks In Qualifying Exam", "Reward": "30% Of Tuition Fee" },
-                    { "Condition": "75%-79.99% Marks In Qualifying Exam", "Reward": "25% Of Tuition Fee" },
-                    { "Condition": "70%-74.99% Marks In Qualifying Exam", "Reward": "20% Of Tuition Fee" },
-                    { "Condition": "60%-69.99% Marks In Qualifying Exam", "Reward": "15% Of Tuition Fee" }
-                ]
-            }
-        },
-        {
-            "SNo": 3,
-            "intent_name": "scholarship_sports",
-            "responses": {
-                "en-US": "The Sports Person Quota Scholarship offers up to 75% of tuition fee waiver for participation at International, National, or State levels.",
-                "hi-IN": "स्पोर्ट्स पर्सन कोटा छात्रवृत्ति अंतर्राष्ट्रीय, राष्ट्रीय या राज्य स्तर पर भागीदारी के लिए शिक्षण शुल्क में 75% तक की छूट प्रदान करती है।"
-            },
-            "data": {
-                "ScholarshipScheme": "Sports Person Quota Scholarship",
-                "Criteria": [
-                    { "Condition": "International Level Participation", "Reward": "75% Of Tuition Fee" },
-                    { "Condition": "National Level Participation", "Reward": "50% Of Tuition Fee" },
-                    { "Condition": "State Level Participation", "Reward": "25% Of Tuition Fee" }
-                ]
-            }
-        },
-        {
-            "SNo": 4,
-            "intent_name": "scholarship_achievements_other",
-            "responses": {
-                "en-US": "Scholarships for Achievements in Other Fields provide up to 75% of tuition fee waiver for participation at International, National, or State levels.",
-                "hi-IN": "अन्य क्षेत्रों में उपलब्धियों के लिए छात्रवृत्ति अंतर्राष्ट्रीय, राष्ट्रीय या राज्य स्तर पर भागीदारी के लिए शिक्षण शुल्क में 75% तक की छूट प्रदान करती है।"
-            },
-            "data": {
-                "ScholarshipScheme": "Achievements In Other Fields",
-                "Criteria": [
-                    { "Condition": "International Level Participation", "Reward": "75% Of Tuition Fee" },
-                    { "Condition": "National Level Participation", "Reward": "50% Of Tuition Fee" },
-                    { "Condition": "State Level Participation", "Reward": "25% Of Tuition Fee" }
-                ]
-            }
-        },
-        {
-            "SNo": 5,
-            "intent_name": "scholarship_defence",
-            "responses": {
-                "en-US": "A scholarship of 25% of the tuition fee is available for Defence Personnel & their Dependants.",
-                "hi-IN": "रक्षा कर्मियों और उनके आश्रितों के लिए शिक्षण शुल्क में 25% की छात्रवृत्ति उपलब्ध है।"
-            },
-            "data": {
-                "ScholarshipScheme": "Defence Personnel & Dependant",
-                "Criteria": [
-                    { "Condition": "All Eligible Candidates", "Reward": "25% Of Tuition Fee" }
-                ]
-            }
-        },
-        {
-            "SNo": 6,
-            "intent_name": "scholarship_jee_mains",
-            "responses": {
-                "en-US": "Scholarships for JEE Mains rank holders offer up to 100% of the tuition fee waiver based on rank.",
-                "hi-IN": "जेईई मेन्स रैंक धारकों के लिए छात्रवृत्ति रैंक के आधार पर शिक्षण शुल्क में 100% तक की छूट प्रदान करती है।"
-            },
-            "data": {
-                "ScholarshipScheme": "For Jee Mains",
-                "Criteria": [
-                    { "Condition": "1-20,000", "Reward": "100% Of Tuition Fee" },
-                    { "Condition": "20,001-30,000", "Reward": "75% Of Tuition Fee" },
-                    { "Condition": "30,001-40,000", "Reward": "50% Of Tuition Fee" },
-                    { "Condition": "40,001-50,000", "Reward": "30% Of Tuition Fee" },
-                    { "Condition": "50,001-60,000", "Reward": "15% Of Tuition Fee" }
-                ]
-            }
-        },
-        {
-            "SNo": 7,
-            "intent_name": "scholarship_cuet_cat",
-            "responses": {
-                "en-US": "Scholarships for CUET/CAT/MAT/IUCET provide up to 100% of the tuition fee waiver based on percentile.",
-                "hi-IN": "सीयूईटी/कैट/मैट/आईयूसीईटी के लिए छात्रवृत्ति पर्सेंटाइल के आधार पर शिक्षण शुल्क में 100% तक की छूट प्रदान करती है।"
-            },
-            "data": {
-                "ScholarshipScheme": "For Cuet/cat/mat/iucet",
-                "Criteria": [
-                    { "Condition": ">95 Percentile", "Reward": "100% Of Tuition Fee" },
-                    { "Condition": "90-94.99 Percentile", "Reward": "75% Of Tuition Fee" },
-                    { "Condition": "85-89.99 Percentile", "Reward": "50% Of Tuition Fee" },
-                    { "Condition": "80-84.99 Percentile", "Reward": "30% Of Tuition Fee" },
-                    { "Condition": "75-79.99 Percentile", "Reward": "20% Of Tuition Fee" },
-                    { "Condition": "70-74.99 Percentile", "Reward": "15% Of Tuition Fee" }
-                ]
-            }
-        },
-        {
-            "SNo": 8,
-            "intent_name": "scholarship_clat",
-            "responses": {
-                "en-US": "Scholarships for CLAT offer up to 100% of the tuition fee waiver based on rank.",
-                "hi-IN": "क्लैट के लिए छात्रवृत्ति रैंक के आधार पर शिक्षण शुल्क में 100% तक की छूट प्रदान करती है।"
-            },
-            "data": {
-                "ScholarshipScheme": "For Clat",
-                "Criteria": [
-                    { "Condition": "1-500", "Reward": "100% Of Tuition Fee" },
-                    { "Condition": "501-1000", "Reward": "75% Of Tuition Fee" },
-                    { "Condition": "1001-1500", "Reward": "50% Of Tuition Fee" },
-                    { "Condition": "1500-2000", "Reward": "30% Of Tuition Fee" },
-                    { "Condition": "2001-qualified", "Reward": "20% Of Tuition Fee" }
-                ]
-            }
-        }
-    ]
-}
+**Available Scholarships Summary**
+The following scholarships are available for new students:
+- Merit Based Scholarship (For Under Graduate & Diploma Program)
+- Merit Based Scholarship (For Post Graduate Program)
+- Sports Person Quota Scholarship
+- Achievements In Other Fields
+- Defence Personnel & Dependant
+- For Jee Mains
+- For Cuet/cat/mat/iucet
+- For Clat
+You can ask for more details about any specific scholarship by name.
+
+---
+
+**Scholarship Scheme: Merit Based Scholarship (For Under Graduate & Diploma Program)**
+This scholarship offers a tuition fee waiver depending on marks in the qualifying exam.
+- Condition: 90% And Above Marks In Qualifying Exam, Reward: 100% Of Tuition Fee
+- Condition: 80%-89.99% Marks In Qualifying Exam, Reward: 50% Of Tuition Fee
+- Condition: 75%-79.99% Marks In Qualifying Exam, Reward: 30% Of Tuition Fee
+- Condition: 70%-74.99% Marks In Qualifying Exam, Reward: 20% Of Tuition Fee
+
+---
+
+**Scholarship Scheme: Merit Based Scholarship (For Post Graduate Program)**
+This scholarship provides a tuition fee waiver based on marks in the qualifying exam.
+- Condition: 90% And Above Marks In Qualifying Exam, Reward: 100% Of Tuition Fee
+- Condition: 85%-89.99% Marks In Qualifying Exam, Reward: 50% Of Tuition Fee
+- Condition: 80%-84.99% Marks In Qualifying Exam, Reward: 30% Of Tuition Fee
+- Condition: 75%-79.99% Marks In Qualifying Exam, Reward: 25% Of Tuition Fee
+- Condition: 70%-74.99% Marks In Qualifying Exam, Reward: 20% Of Tuition Fee
+- Condition: 60%-69.99% Marks In Qualifying Exam, Reward: 15% Of Tuition Fee
+
+---
+
+**Scholarship Scheme: Sports Person Quota Scholarship**
+This scholarship offers a tuition fee waiver for participation at International, National, or State levels.
+- Condition: International Level Participation, Reward: 75% Of Tuition Fee
+- Condition: National Level Participation, Reward: 50% Of Tuition Fee
+- Condition: State Level Participation, Reward: 25% Of Tuition Fee
+
+---
+
+**Scholarship Scheme: Achievements In Other Fields**
+This scholarship provides a tuition fee waiver for participation at International, National, or State levels.
+- Condition: International Level Participation, Reward: 75% Of Tuition Fee
+- Condition: National Level Participation, Reward: 50% Of Tuition Fee
+- Condition: State Level Participation, Reward: 25% Of Tuition Fee
+
+---
+
+**Scholarship Scheme: Defence Personnel & Dependant**
+A scholarship is available for Defence Personnel & their Dependants.
+- Condition: All Eligible Candidates, Reward: 25% Of Tuition Fee
+
+---
+
+**Scholarship Scheme: For Jee Mains**
+This scholarship offers a tuition fee waiver based on JEE Mains rank.
+- Condition: 1-20,000, Reward: 100% Of Tuition Fee
+- Condition: 20,001-30,000, Reward: 75% Of Tuition Fee
+- Condition: 30,001-40,000, Reward: 50% Of Tuition Fee
+- Condition: 40,001-50,000, Reward: 30% Of Tuition Fee
+- Condition: 50,001-60,000, Reward: 15% Of Tuition Fee
+
+---
+
+**Scholarship Scheme: For Cuet/cat/mat/iucet**
+This scholarship provides a tuition fee waiver based on percentile in CUET/CAT/MAT/IUCET.
+- Condition: >95 Percentile, Reward: 100% Of Tuition Fee
+- Condition: 90-94.99 Percentile, Reward: 75% Of Tuition Fee
+- Condition: 85-89.99 Percentile, Reward: 50% Of Tuition Fee
+- Condition: 80-84.99 Percentile, Reward: 30% Of Tuition Fee
+- Condition: 75-79.99 Percentile, Reward: 20% Of Tuition Fee
+- Condition: 70-74.99 Percentile, Reward: 15% Of Tuition Fee
+
+---
+
+**Scholarship Scheme: For Clat**
+This scholarship offers a tuition fee waiver based on CLAT rank.
+- Condition: 1-500, Reward: 100% Of Tuition Fee
+- Condition: 501-1000, Reward: 75% Of Tuition Fee
+- Condition: 1001-1500, Reward: 50% Of Tuition Fee
+- Condition: 1500-2000, Reward: 30% Of Tuition Fee
+- Condition: 2001-qualified, Reward: 20% Of Tuition Fee
