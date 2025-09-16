@@ -53,7 +53,7 @@ async def chat_with_bot(request: ChatRequest):
         # 2. Query Pinecone
         search_results = pinecone_index.query(
             vector=query_embedding,
-            top_k=3,
+            top_k=5,
             include_metadata=True
         )
 

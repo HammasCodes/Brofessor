@@ -43,7 +43,7 @@ print("Connected to Pinecone index successfully!")
 embeddings = OpenAIEmbeddings(model="text-embedding-3-large", openai_api_key=OPENAI_API_KEY)
 
 # ------------------- TEXT SPLITTER -------------------
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=1000)
 
 # ------------------- VECTORSTORE -------------------
 vectorstore = LangchainPinecone.from_existing_index(index_name=INDEX_NAME, embedding=embeddings)
