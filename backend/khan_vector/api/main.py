@@ -69,7 +69,7 @@ app = FastAPI(
 
 # CORS setup
 origins = [
-   "https://brofessor-bipwo8xqs-zaibs-projects-e1542b47.vercel.app"
+   "https://brofessor-bipwo8xqs-zaibs-projects-e1542b47.vercel.app/"
 ]
 
 app.add_middleware(
