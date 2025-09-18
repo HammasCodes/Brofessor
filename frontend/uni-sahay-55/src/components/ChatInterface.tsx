@@ -65,7 +65,7 @@ export default function ChatInterface() {
   // Check backend root route
   const checkBackendConnection = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/health/`); // call your health check route
+      const response = await fetch(`${API_BASE_URL}/health/`);
       setIsOnline(response.ok);
     } catch (error) {
       console.error('Backend connection failed:', error);
@@ -181,43 +181,62 @@ export default function ChatInterface() {
     <div className="flex flex-col h-screen bg-[#171717] text-gray-100 font-sans">
       {/* Header */}
       <div className="bg-[#242424] p-4 shadow-xl border-b border-[#333333] transition-all duration-500 ease-in-out">
-        <div className="flex items-center justify-between max-w-4xl mx-auto">
-          <div className="flex items-center space-x-3">
-            <Avatar className="h-10 w-10 border-2 border-green-500 bg-[#333333] animate-pulse-fast">
-              <AvatarFallback><Bot className="h-6 w-6 text-green-500" /></AvatarFallback>
-            </Avatar>
-            <div>
-              <div className="flex items-center space-x-2">
-                <h1 className="text-xl font-bold">BROFESSOR</h1>
-                <div className={`w-2 h-2 rounded-full ${isOnline ? 'bg-green-400' : 'bg-red-400'} animate-pulse`} />
-              </div>
-              <p className="text-gray-400 text-sm">
-                Invertis University {!isOnline && '(Offline Mode)'}
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-3">
-            <Button onClick={() => setShowNewChatDialog(true)} variant="ghost" size="sm" className="h-9 w-9 p-0 text-gray-400 hover:text-gray-200 transition-transform duration-300 hover:scale-110">
-              <RefreshCw className="h-5 w-5" />
-            </Button>
-            <div className="flex items-center space-x-2">
-              <Globe className="h-5 w-5 text-gray-400" />
-              <select
-                value={selectedLanguage}
-                onChange={(e) => setSelectedLanguage(e.target.value)}
-                className="bg-[#333333] text-gray-200 border-0 rounded-md px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors"
-              >
-                {languages.map(lang => <option key={lang.code} value={lang.code}>{lang.flag} {lang.name}</option>)}
-              </select>
-            </div>
-          </div>
+  <div className="flex flex-row flex-wrap items-center justify-between max-w-6xl mx-auto space-y-3 sm:space-y-0">
+    {/* Left: Logo + Status */}
+    <div className="flex items-center space-x-3">
+      <Avatar className="h-10 w-10 border-2 border-green-500 bg-[#333333] animate-pulse-fast">
+        <AvatarFallback>
+          <Bot className="h-6 w-6 text-green-500" />
+        </AvatarFallback>
+      </Avatar>
+      <div>
+        <div className="flex items-center space-x-2">
+          <h1 className="text-lg sm:text-xl font-bold">BROFESSOR</h1>
+          <div
+            className={`w-2 h-2 rounded-full ${
+              isOnline ? "bg-green-400" : "bg-red-400"
+            } animate-pulse`}
+          />
         </div>
+        <p className="text-gray-400 text-xs sm:text-sm">
+          Invertis University {!isOnline && "(Offline Mode)"}
+        </p>
       </div>
+    </div>
+
+    {/* Right: Buttons + Language Selector */}
+    <div className="flex items-center space-x-3">
+      <Button
+        onClick={() => setShowNewChatDialog(true)}
+        variant="ghost"
+        size="sm"
+        className="h-9 w-9 p-0 text-gray-400 hover:text-gray-200 transition-transform duration-300 hover:scale-110"
+      >
+        <RefreshCw className="h-5 w-5" />
+      </Button>
+      <div className="flex items-center space-x-2">
+        <Globe className="h-5 w-5 text-gray-400 hidden sm:block" />
+        <select
+          value={selectedLanguage}
+          onChange={(e) => setSelectedLanguage(e.target.value)}
+          className="bg-[#333333] text-gray-200 border-0 rounded-md px-2 py-1 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors"
+        >
+          {languages.map((lang) => (
+            <option key={lang.code} value={lang.code}>
+              {lang.flag} {lang.name}
+            </option>
+          ))}
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       {/* Connection Banner */}
       {!isOnline && (
-        <div className="bg-red-900/40 border-l-4 border-red-500 p-3 text-red-300 text-sm animate-fade-in-down">
-          <div className="flex items-center max-w-4xl mx-auto">
+        <div className="bg-red-900/40 border-l-4 border-red-500 p-3 text-red-300 text-xs sm:text-sm animate-fade-in-down">
+          <div className="flex items-center max-w-6xl mx-auto">
             <AlertCircle className="h-4 w-4 mr-2 text-red-500 animate-pulse" />
             <span>Backend connection lost. Using offline responses.</span>
             <Button onClick={checkBackendConnection} variant="ghost" size="sm" className="ml-auto text-red-300 hover:text-red-200 transition-colors">Retry</Button>
@@ -226,20 +245,20 @@ export default function ChatInterface() {
       )}
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 custom-scrollbar">
-        <div className="max-w-4xl mx-auto space-y-5">
+      <div className="flex-1 overflow-y-auto p-3 sm:p-4 custom-scrollbar">
+        <div className="max-w-6xl mx-auto space-y-4 sm:space-y-5">
           {messages.map(msg => (
             <div key={msg.id} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`flex items-start space-x-3 max-w-[85%] ${msg.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''} animate-fade-in-up`}>
-                <Avatar className="h-8 w-8 flex-shrink-0 border border-gray-600">
+              <div className={`flex items-start space-x-2 sm:space-x-3 max-w-[90%] sm:max-w-[85%] ${msg.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''} animate-fade-in-up`}>
+                <Avatar className="h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0 border border-gray-600">
                   <AvatarFallback className={`bg-[#333333] ${msg.type === 'user' ? 'text-blue-400' : 'text-green-500'}`}>
-                    {msg.type === 'user' ? <User className="h-4 w-4" /> : <Bot className="h-4 w-4" />}
+                    {msg.type === 'user' ? <User className="h-3 w-3 sm:h-4 sm:w-4" /> : <Bot className="h-3 w-3 sm:h-4 sm:w-4" />}
                   </AvatarFallback>
                 </Avatar>
                 <Card className={`rounded-xl shadow-lg border-none ${msg.type === 'user' ? 'bg-[#333333] text-gray-100 rounded-br-none' : 'bg-[#1e1e1e] text-gray-200 rounded-bl-none'}`}>
-                  <CardContent className="p-4">
-                    <p className="text-sm sm:text-base whitespace-pre-line">{msg.content}</p>
-                    <p className="text-xs text-gray-500 mt-2">{msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
+                  <CardContent className="p-3 sm:p-4">
+                    <p className="text-xs sm:text-sm md:text-base whitespace-pre-line">{msg.content}</p>
+                    <p className="text-[10px] sm:text-xs text-gray-500 mt-1 sm:mt-2">{msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
                   </CardContent>
                 </Card>
               </div>
@@ -247,10 +266,12 @@ export default function ChatInterface() {
           ))}
           {isTyping && (
             <div className="flex justify-start">
-              <div className="flex items-start space-x-3 max-w-[85%] animate-fade-in-up">
-                <Avatar className="h-8 w-8 flex-shrink-0 border border-gray-600"><AvatarFallback className="bg-[#333333] text-green-500"><Bot className="h-4 w-4" /></AvatarFallback></Avatar>
+              <div className="flex items-start space-x-2 sm:space-x-3 max-w-[90%] sm:max-w-[85%] animate-fade-in-up">
+                <Avatar className="h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0 border border-gray-600">
+                  <AvatarFallback className="bg-[#333333] text-green-500"><Bot className="h-3 w-3 sm:h-4 sm:w-4" /></AvatarFallback>
+                </Avatar>
                 <Card className="bg-[#1e1e1e] text-gray-200 rounded-xl shadow-lg rounded-bl-none border-none">
-                  <CardContent className="p-4">
+                  <CardContent className="p-3 sm:p-4">
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
                       <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
@@ -266,40 +287,40 @@ export default function ChatInterface() {
       </div>
 
       {/* Categories & Input */}
-      <div className="p-4 bg-[#242424] border-t border-[#333333] w-full max-w-8xl mx-auto">
+      <div className="p-3 sm:p-4 bg-[#242424] border-t border-[#333333] w-full max-w-7xl mx-auto">
         {/* Category Buttons */}
-        <div className="flex space-x-3 overflow-x-auto pb-4 hide-scrollbar">
+        <div className="flex space-x-2 sm:space-x-3 overflow-x-auto pb-3 sm:pb-4 hide-scrollbar">
           {categoryButtons.map((cat) => (
             <Button
               key={cat.key}
               variant="outline"
               size="sm"
-              className="h-auto px-4 py-3 flex flex-col items-center space-y-1 text-xs rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 bg-[#333333] border-[#444444] text-gray-300 hover:bg-[#444444] hover:scale-105"
+              className="h-auto px-3 py-2 sm:px-4 sm:py-3 flex flex-col items-center space-y-1 text-[10px] sm:text-xs rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 bg-[#333333] border-[#444444] text-gray-300 hover:bg-[#444444] hover:scale-105"
               onClick={() => handleCategoryClick(cat.key)}
               disabled={isTyping}
             >
-              <cat.icon className="h-5 w-5 text-green-500" />
+              <cat.icon className="h-4 w-4 sm:h-5 sm:w-5 text-green-500" />
               <span className="text-center leading-tight">{cat.label}</span>
             </Button>
           ))}
         </div>
 
         {/* Input + Send */}
-        <div className="flex space-x-3">
+        <div className="flex space-x-2 sm:space-x-3">
           <Input
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Message..."
-            className="flex-1 rounded-full px-5 py-3 bg-[#1e1e1e] text-gray-100 border border-[#333333] focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300"
+            className="flex-1 rounded-full px-4 sm:px-5 py-2 sm:py-3 bg-[#1e1e1e] text-gray-100 border border-[#333333] focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300 text-sm sm:text-base"
             onKeyPress={(e) => e.key === "Enter" && handleSendMessage(inputValue)}
             disabled={isTyping}
           />
           <Button
             onClick={() => handleSendMessage(inputValue)}
             disabled={!inputValue.trim() || isTyping}
-            className="rounded-full px-5 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="rounded-full px-4 sm:px-5 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            <Send className="h-5 w-5 animate-pulse-on-click" />
+            <Send className="h-4 w-4 sm:h-5 sm:w-5 animate-pulse-on-click" />
           </Button>
         </div>
       </div>
@@ -307,17 +328,17 @@ export default function ChatInterface() {
       {/* New Chat Dialog */}
       {showNewChatDialog && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 animate-fade-in">
-          <div className="bg-[#242424] rounded-lg p-8 mx-4 w-full max-w-sm shadow-2xl animate-scale-up">
+          <div className="bg-[#242424] rounded-lg p-6 sm:p-8 mx-3 sm:mx-4 w-full max-w-sm shadow-2xl animate-scale-up">
             <div className="text-center mb-6">
-              <div className="mx-auto w-16 h-16 bg-[#333333] rounded-full flex items-center justify-center mb-4 border-2 border-green-500">
-                <Bot className="h-8 w-8 text-green-500" />
+              <div className="mx-auto w-14 h-14 sm:w-16 sm:h-16 bg-[#333333] rounded-full flex items-center justify-center mb-4 border-2 border-green-500">
+                <Bot className="h-6 w-6 sm:h-8 sm:w-8 text-green-500" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Start a new chat?</h3>
-              <p className="text-gray-400 text-sm">This will clear the current conversation.</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Start a new chat?</h3>
+              <p className="text-gray-400 text-xs sm:text-sm">This will clear the current conversation.</p>
             </div>
             <div className="space-y-3">
-              <Button onClick={handleNewChat} className="w-full bg-green-600 hover:bg-green-700 text-white transition-colors">Start new chat</Button>
-              <Button onClick={() => setShowNewChatDialog(false)} variant="ghost" className="w-full text-gray-300 hover:bg-gray-700 transition-colors">Cancel</Button>
+              <Button onClick={handleNewChat} className="w-full bg-green-600 hover:bg-green-700 text-white transition-colors text-sm sm:text-base">Start new chat</Button>
+              <Button onClick={() => setShowNewChatDialog(false)} variant="ghost" className="w-full text-gray-300 hover:bg-gray-700 transition-colors text-sm sm:text-base">Cancel</Button>
             </div>
           </div>
         </div>
