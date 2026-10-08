@@ -1,0 +1,165 @@
+Available Faculty Summary
+
+The following faculty information is available:
+
+Amritansh Mishra Sir
+
+Manish Gupta Sir
+
+Akash Sanghi Sir
+
+Kushal Jauhri Sir
+
+Siddharth Pandey Sir
+
+Ritik Saxena Sir
+
+Deepak Pathak Sir
+
+Saurabh Kumar Sir
+
+Geetanjali Rautela Ma'am
+
+Navnika Kapoor Ma'am
+
+Bharat Sir
+
+Kuldeep Singh Rana Sir
+
+Rahul Mishra Sir
+
+Pratha Ma'am
+
+Atul Sir
+
+Megha Ma'am
+
+You can ask for more details about any specific faculty by name.
+
+Faculty Information: Amritansh Mishra Sir
+
+Faculty No.: 9997779184
+
+Room No.: 70
+
+Position: Chief Proctor
+
+Faculty Information: Manish Gupta Sir
+
+Faculty No.: 9690017946
+
+Room No.: 71
+
+Position: Dean
+
+Faculty Information: Akash Sanghi Sir
+
+Faculty No.: 7217011275
+
+Room No.: 48
+
+Position: HOD (Computer Application Department)
+
+Faculty Information: Kushal Jauhri Sir
+
+Faculty No.: 7217011336
+
+Room No.: 104
+
+Position: Associate HOD
+
+Faculty Information: Siddharth Pandey Sir
+
+Faculty No.: 8979302777
+
+Room No.: 94
+
+Position: Time-Table Co-ordinator
+
+Faculty Information: Ritik Saxena Sir
+
+Faculty No.: 7505770458
+
+Room No.: 132
+
+Position: Time-Table Co-ordinator
+
+Faculty Information: Deepak Pathak Sir
+
+Faculty No.: 7217011344
+
+Room No.: 104
+
+Position: OCA LinkedIn Coordinator & Digi Shakti Co-ordinator
+
+Faculty Information: Saurabh Kumar Sir
+
+Faculty No.: 7217011343
+
+Room No.: 104
+
+Position: End Semester Practical In-Charge
+
+Faculty Information: Geetanjali Rautela Ma'am
+
+Faculty No.: 8279916208
+
+Room No.: 104
+
+Position: UG Training & Placement Co-ordinator
+
+Faculty Information: Navnika Kapoor Ma'am
+
+Faculty No.: 8171055336
+
+Room No.: 104
+
+Position: Not Available
+
+Faculty Information: Bharat Sir
+
+Faculty No.: Not Available
+
+Room No.: 104
+
+Position: Not Available
+
+Faculty Information: Kuldeep Singh Rana Sir
+
+Faculty No.: 8384897322
+
+Room No.: 132
+
+Position: Not Available
+
+Faculty Information: Rahul Mishra Sir
+
+Faculty No.: 7310048468
+
+Room No.: 132
+
+Position: FOCA Room Amenities Co-ordinator
+
+Faculty Information: Pratha Ma'am
+
+Faculty No.: 6398955436
+
+Room No.: 94
+
+Position: Not Available
+
+Faculty Information: Atul Sir
+
+Faculty No.: 9870750649
+
+Room No.: 104
+
+Position: Not Available
+
+Faculty Information: Megha Ma'am
+
+Faculty No.: 9997256653
+
+Room No.: 94
+
+Position: Not Available
